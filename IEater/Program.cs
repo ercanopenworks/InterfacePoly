@@ -34,7 +34,14 @@ namespace IEater
             }
         }
 
+        //abstraction
         private static void Eat(IEater eater)
+        {
+            eater.Eat();
+        }
+
+        //usage of generics 
+        private static void Eat<T>(T eater) where T:IEater
         {
             eater.Eat();
         }
